@@ -2,7 +2,6 @@ package co.uniquindio.programacion2.agenda.model;
 import java.util.Arrays;
 public class Grupo {
 	
-	
 
 	private String nombre;
 	private Contacto[] listGruposAsociados;
@@ -10,7 +9,7 @@ public class Grupo {
 	
 	public Grupo(String nombre) {
 		this.nombre = nombre;
-		this.listGruposAsociados= new Contacto[10];
+		this.listGruposAsociados= new Contacto[5];
 	}
 
 	public String getNombre() {
