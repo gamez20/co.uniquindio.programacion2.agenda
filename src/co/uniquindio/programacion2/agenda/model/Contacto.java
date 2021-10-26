@@ -2,10 +2,13 @@ package co.uniquindio.programacion2.agenda.model;
 
 /**
  * Clase Contacto
- * @author Curso programación 2 nocturna
+ * @author Curso programaciï¿½n 2 nocturna
  *
  */
 public class Contacto {
+	
+	Grupo [] listGruposAsociados;
+
 	
 	// DeclaraciÃ³n de los atributos
 	private String nombre;
@@ -28,6 +31,9 @@ public class Contacto {
 	public Contacto(String nombre, String telefono) {
 		this.nombre = nombre;
 		this.telefono = telefono;
+		
+		listGruposAsociados = new Grupo [3];
+		
 	}
 
 	/**
