@@ -19,7 +19,7 @@ public class Aplicacion {
 		Agenda agenda = new Agenda();
 		
 		String nombreContracto = "";
-		String telefonoContactoString = "";
+		int telefonoContactoString =0 ;
 		
 		
 		do {
