@@ -1,5 +1,7 @@
 package co.uniquindio.programacion2.agenda.model;
 
+import java.util.Arrays;
+
 /**
  * Clase Contacto
  * @author Curso programaciÃ³n 2 nocturna
@@ -86,13 +88,17 @@ public class Contacto {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
-	
-	
+
+
+
+
 	@Override
 	public String toString() {
-		return "Contacto [nombre=" + nombre + ", telefono=" + telefono + "]";
+		return "Contacto nombre=" + nombre
+				+ ", telefono=" + telefono + ", edad=" + edad + "]";
 	}
+	
+	
 	
 	
 	

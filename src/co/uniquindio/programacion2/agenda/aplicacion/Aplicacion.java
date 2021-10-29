@@ -18,7 +18,7 @@ public class Aplicacion {
 		
 		//crud
 		//1. Crear contacto
-		crearContacto(agenda, "Carlos", "45678", 20);
+		//crearContacto(agenda, "Carlos", "45678", 20);
 		
 		//2. actualizar contacto
 //		actualizarContacto("Pedro","45678");
@@ -58,10 +58,5 @@ public class Aplicacion {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
-	
-	
 
 }
