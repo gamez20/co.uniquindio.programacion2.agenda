@@ -167,14 +167,8 @@ public class Agenda {
 //			lanzar la excepcion
 			throw new ContactoExcepction("El contacto ya existe");
 		}
-		
-		
-		
-		
-		
-		
-		
 	}
+	
 	private int obtenerPosicion() {
 
 		int posicion = -1;
@@ -229,7 +223,100 @@ public class Agenda {
 		
 		return edadAleatoria;
 	}
+	
+	
+	/**
+	 * nuevo
+	 * Ordenar la lista de contactos aplicando el método burbuja
+	 * 
+	 * */
+	public void ordenarListaContactos() {
+			
+			Contacto contactoMovido = new Contacto();
+			
+	        int i, j;
+	        
+	        for (i = 0; i < listContactos.length ; i++) {
+	            
+	        	for (j = 0; j < listContactos.length - 1; j++) {
+	                
+	        		if (listContactos[j + 1].getEdad() < listContactos[j].getEdad()) {
+	                	contactoMovido = listContactos[j + 1];
+	                    listContactos[j + 1] = listContactos[j];
+	                    listContactos[j] = contactoMovido;
+	                }
+	            }
+	        }
+	        
+	        System.out.println("------------ahora ordenados-------------");
+	        
+			for (int l = 0; l < listContactos.length; l++) {
+				
+				System.out.println(listContactos[l].toString());
+				
+			}
+		}
 
-
+	
+	/**
+	 * nuevo
+	 * Imprimir los contactos de las posiciones pares
+	 * 
+	 * */
+	public String contactosPosicionPar() {
+		
+		String mensaje = "";
+		
+		for (int i = 0; i < listContactos.length ; i++) {
+			  if (i%2 == 0 && listContactos[i] != null) {
+				mensaje = listContactos[i].toString()  + "\n";
+			  }
+		}
+	  
+		return mensaje;
+	}
+	
+	
+	/**
+	 * nuevo
+	 * Obtener el promedio de edades de los contactos
+	 * 
+	 * */
+	public double promedioEdades() {
+		
+		double promedio = 0;
+		int contador = 0;
+		
+		for (int i = 0; i < listContactos.length ; i++) {
+			 
+			if(listContactos[i] != null) {
+				contador++;
+				promedio += listContactos[i].getEdad();
+			 }
+			 
+		}
+		
+		return promedio/contador;
+	}
+	
+	/**
+	 * nuevo
+	 * Asociar un contacto a un grupo dado el nombre del grupo
+	 * @param nombreGrupo
+	 * **/
+	
+	public String setContactoAGrupo(String nombreGrupo, Contacto contacto) {
+		
+		String mensaje = "OK";
+		
+		for (int i = 0; i < listGrupos.length; i++) {
+			if (listGrupos[i] != null && listGrupos[i].getNombre().equalsIgnoreCase(nombreGrupo)) {
+				listGrupos[i].setContacto(contacto);
+			}else {
+				mensaje = "Error\n El grupo no existe";
+			}
+		}
+		return mensaje;
+	}
 
 }

@@ -41,9 +41,9 @@ public class Contacto {
 		listGruposAsociados = new Grupo [3];
 	}
 	
+	public Contacto() {}
 	
-	
-	
+
 	public int getEdad() {
 		return edad;
 	}

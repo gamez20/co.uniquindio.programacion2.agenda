@@ -1,5 +1,6 @@
 package co.uniquindio.programacion2.agenda.test;
 
+import java.util.Iterator;
 import java.util.Random;
 
 import co.uniquindio.programacion2.agenda.model.Agenda;
@@ -35,8 +36,6 @@ public class TestData {
 			
 		}
 		
-	
-		
 		/*
 		Contacto contacto = new Contacto("Juan", "12345", 20);
 		listaContactos[0] = contacto;
@@ -50,6 +49,7 @@ public class TestData {
 		return agenda;
 		
 	}
+	
 
 	public int inicializarEdadAleatoria(){
 			
